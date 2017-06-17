@@ -1,5 +1,5 @@
 {
-  "name": "Thinkful Blog API project",
+  "name": "thinkful-blog-api",
   "version": "0.0.1",
   "description": "Thinkful Blog API project",
   "main": "server.js",

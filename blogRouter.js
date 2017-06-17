@@ -2,17 +2,17 @@ const express = require('express');
 const router = express.Router();
 
 const bodyParser = require('body-parser');
-const jsonParser = bodyParse.json;
+const jsonParser = bodyParser.json();
 
-const {Blogs} = require('./models');
+const {BlogPosts} = require('./models');
 
-Blogs.create('10 Popular Stars from the 80s: Where are They Now?', 'Blahditty Blah Blah Blah', 'Pilotless Drone');
+BlogPosts.create('10 Popular Stars from the 80s: Where are They Now?', 'Blahditty Blah Blah Blah', 'Pilotless Drone');
 
-Blogs.create('TV and Self Hypnosis', 'Beeeeeeeeeeeeeeeeeeeep', 'Nada');
+BlogPosts.create('TV and Self Hypnosis', 'Beeeeeeeeeeeeeeeeeeeep', 'Nada');
 
 
 router.get('/', (req, res) => {
-  res.json(Blogs.get());
+  res.json(BlogPosts.get());
 });
 
 router.post('/', jsonParser, (req, res) => {
@@ -26,12 +26,12 @@ router.post('/', jsonParser, (req, res) => {
       return res.status(400).send(message);
     }
   }
-  const item = Blogs.create(req.body.title, req.body.content, req.body.author, req.body.publishDate);
+  const item = BlogPosts.create(req.body.title, req.body.content, req.body.author, req.body.publishDate);
   res.status(201).json(item);
 });
 
 router.delete('/:id', (req, res) => {
-  Blogs.delete(req.params.id);
+  BlogPosts.delete(req.params.id);
   console.log(`Deleted shopping list item \`${req.params.ID}\``);
   res.status(204).end();
 });
@@ -55,7 +55,7 @@ router.put('/:id', jsonParser, (req, res) => {
     return res.status(400).send(message);
   }
   console.log(`Updating blog post \`${req.params.id}\``);
-  const updatedItem = Blogs.update({
+  const updatedItem = BlogPosts.update({
     id: req.params.id,
     title: req.body.title,
     content: req.body.content,
