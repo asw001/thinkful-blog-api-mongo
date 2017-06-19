@@ -38,7 +38,7 @@ router.delete('/:id', (req, res) => {
 
 
 router.put('/:id', jsonParser, (req, res) => {
-  const requiredFields = ['name', 'ingredients', 'id'];
+  const requiredFields = ['title', 'content', 'author'];
   for (let i=0; i<requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
