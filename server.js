@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const app = express();
 // Mongoose internally uses a promise-like object,
