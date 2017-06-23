@@ -1,0 +1,9 @@
+language: node_js
+node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: UvbufBZ2zjKBE83xPMm7Mh240pNTa6N1r/T99jY8edJMPlVSznFdQQAJ3kWRzaIEILcIOvw1ySHL2XHiM5y9AmXsuTChLCT6l/XZmP58Qwu7tlM6OgcegcpdkMab4JbgAwakZQnwDnkOjiP1O5H3pM0JHKPV+nMNTMHSMsjdhyUXdns0wDe3a3MslDnAtZ+6TOGOb8j0PsiHhnqf9S4+Qnalmn7GcjWgEBcTOLi/8N+W39igoY3zzk+WBWYMg1dd78eUql3Xvq3RYhfRrTEYqNtFNHpgZ+5YZeIa+ItFPophERwkRjew1NY9uT+sfWBg/qLihlfKri6EQAcr1lgH6SZsIUR2Jte5N+QQOI+0nTeMlcPdJ7yUJDamG6ZP0G8uORqc59dAtndRXREOQzwzKqL67cRk8Zrc6AxlEBg4xplRV9Qq9GH9Ruz6de0bZuH3aOPt6bb5BRtf3rxd6K47OwV5PT+IIfTN+haZ+LlRlDVhgkAHmC9L69Rvqp5jBDeR0u1cgaWfb4m1Y209z40HobX6Mg3mjRQbHyTkRhE4bI9vTU+ht0oOJUHcRNEOOMcu/ZgkHRKMDkFWkp/l6CQA5gGIK2sdS87j7O2G2oY5KmqZvDp8C/l7Npy31JYhDF4TRTUaUAfGW6oUKQYS6wgdhSFwaD9Z7mY0TW2lEI6ohgA=
+  app: thinkful-blog-api-mongo
+  on:
+    repo: asw001/thinkful-blog-api-mongo
