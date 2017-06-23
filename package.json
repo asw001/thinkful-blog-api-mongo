@@ -1,5 +1,5 @@
 {
-  "name": "thinkful-blog-api",
+  "name": "thinkful-blog-api-mongo",
   "version": "0.0.1",
   "description": "Thinkful Blog API project",
   "main": "server.js",
@@ -11,11 +11,12 @@
     "body-parser": "^1.15.2",
     "express": "^4.12.4",
     "morgan": "^1.7.0",
+    "mongoose": "^4.7.2",
     "uuid": "^2.0.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/asw001/thinkful-blog-api"
+    "url": "https://github.com/asw001/thinkful-blog-api-mongo"
   },
   "keywords": [
     "node",
